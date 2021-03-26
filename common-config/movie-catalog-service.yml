@@ -1,1 +1,11 @@
-
+server:
+  port: ${PORT:8080}
+####
+spring:
+  application:
+    name: movie-catalog-service
+  cloud:
+    config.fail-fast: true
+  config:
+    import: optional:configserver:http://config-server
+####
