@@ -1,3 +1,2 @@
-config-key: this-config-value-comes-from-application.yml
-user:
-  role: role-read-from-default-file
+microservice-world:
+  common-config-test: common-config-read-from-config-server
