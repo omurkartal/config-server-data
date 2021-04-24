@@ -1,19 +1,2 @@
 server:
   port: ${PORT:8090}
-#
-spring:
-  application:
-    name: api-gateway
-  cloud:
-    config:
-      fail-fast: true
-    gateway:
-      routes:
-        - id: MovieCatalogService
-          uri: http://localhost:8080
-          predicates:
-            - Path=/catalog/**
-          filters:
-            - CustomFilter
-  config:
-    import: optional:configserver:http://config-server
